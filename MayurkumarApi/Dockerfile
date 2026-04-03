@@ -6,6 +6,7 @@ RUN dotnet restore "MayurkumarApi.csproj"
 COPY . .
 RUN dotnet publish "MayurkumarApi.csproj" -c Release -o /app/publish
 
+
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
